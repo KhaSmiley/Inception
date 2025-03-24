@@ -16,7 +16,7 @@ RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.ph
 EXPOSE 9000
 
 # Copier le script de configuration
-COPY wordpress.sh /usr/local/bin/wordpress.sh
+COPY tools/wordpress.sh /usr/local/bin/wordpress.sh
 RUN chmod +x /usr/local/bin/wordpress.sh
 
 # Définir le point d'entrée

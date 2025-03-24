@@ -14,10 +14,10 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -subj "/CN=localhost"
 
 # Copie la configuration Nginx
-COPY cg.conf /etc/nginx/conf.d/default.conf
+COPY conf/cg.conf /etc/nginx/conf.d/default.conf
 
 # Expose le port 443
-EXPOSE 443
+EXPOSE 80 443
 
 # Démarre Nginx en mode non-démon
 CMD ["nginx", "-g", "daemon off;"]
